@@ -1,33 +1,16 @@
-{
-    "1": {
-      "name": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "role": "admin",
-      "status": "active"
-    },
-    "2": {
-      "name": "Bob Smith",
-      "email": "bob.smith@example.com",
-      "role": "editor",
-      "status": "inactive"
-    },
-    "3": {
-      "name": "Charlie Lee",
-      "email": "charlie.lee@example.com",
-      "role": "viewer",
-      "status": "active"
-    },
-    "4": {
-      "name": "Dana White",
-      "email": "dana.white@example.com",
-      "role": "editor",
-      "status": "pending"
-    },
-    "5": {
-      "name": "Eli Martinez",
-      "email": "eli.martinez@example.com",
-      "role": "admin",
-      "status": "active"
-    }
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "role": "editor",
+    "status": "inactive"
   }
-  
+]
