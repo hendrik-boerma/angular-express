@@ -9,16 +9,30 @@ import { DataService } from '../../service/data.service';
 export class HeaderComponent {
   constructor(private dataService: DataService) {}
   userData: any
+  productData: any
 
   ngOnInit() {
-    this.getData();
+    this.getUsers();
+    this.getProducts();
   }
   
-  getData() {
-    this.dataService.getData().subscribe({
+  getUsers() {
+    this.dataService.getUsers().subscribe({
       next: res => {
         console.log('res', res);
         this.userData = res;
+      },
+      error: err => {
+        console.error('Error fetching data', err);
+      }
+    });
+  }
+  
+  getProducts() {
+    this.dataService.getProducts().subscribe({
+      next: res => {
+        console.log('res', res);
+        this.productData = res;
       },
       error: err => {
         console.error('Error fetching data', err);

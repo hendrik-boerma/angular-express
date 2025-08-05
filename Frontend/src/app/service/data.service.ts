@@ -8,7 +8,12 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    return this.http.get('http://localhost:4000/api/user');
-  }
+getUsers(): Observable<any> {
+  return this.http.get('http://localhost:4000/api/user');
+}
+
+getProducts(): Observable<any> {
+  return this.http.get('http://localhost:4000/api/product');
+}
+
 }

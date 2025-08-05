@@ -1,16 +1,28 @@
-[
-  {
-    "id": 1,
-    "name": "Alice Johnson",
-    "email": "alice.johnson@example.com",
-    "role": "admin",
-    "status": "active"
-  },
-  {
-    "id": 2,
-    "name": "Bob Smith",
-    "email": "bob.smith@example.com",
-    "role": "editor",
-    "status": "inactive"
-  }
-]
+{
+  "users" : [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "role": "editor",
+      "status": "inactive"
+    }
+  ],
+  "products" : [
+    {
+      "id": 1,
+      "name": "TV"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    }
+  ]
+}
