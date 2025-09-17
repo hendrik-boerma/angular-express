@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    background-color: $cool-grey;
+}
+img {
+    width: 120px;
+    height: auto;
+}

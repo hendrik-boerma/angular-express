@@ -19,7 +19,6 @@ export class HeaderComponent {
   getUsers() {
     this.dataService.getUsers().subscribe({
       next: res => {
-        console.log('res', res);
         this.userData = res;
       },
       error: err => {
@@ -31,7 +30,6 @@ export class HeaderComponent {
   getProducts() {
     this.dataService.getProducts().subscribe({
       next: res => {
-        console.log('res', res);
         this.productData = res;
       },
       error: err => {

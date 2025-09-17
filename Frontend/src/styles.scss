@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    color: $deep-purple;
+    font-family: $font-stack;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-base;
+}
+
+h1 {
+    color: $cool-tech-red;
+    font-size: 32px;
+}
+
+h2 {
+    color: $capgemini-blue;
+    font-size: 24px;
+}
+
+h3 {
+    color: $vibrant-blue;
+    font-size: $font-size-base;
+}
+
+input, button {
+    font-family: $font-stack;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+}
