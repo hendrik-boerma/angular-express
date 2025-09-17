@@ -1,28 +1,48 @@
 {
-  "users" : [
+  "users": [
     {
-      "id": 1,
-      "name": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "role": "admin",
-      "status": "active"
+      "id": 10001200,
+      "username": "tdevries",
+      "password": "tdevries",
+      "name": "Tom de Vries ",
+      "role": "professional",
+      "promocards": {
+        "role": "tester",
+        "name": "Tom de Vries"
+      }
     },
     {
-      "id": 2,
-      "name": "Bob Smith",
-      "email": "bob.smith@example.com",
-      "role": "editor",
-      "status": "inactive"
-    }
-  ],
-  "products" : [
-    {
-      "id": 1,
-      "name": "TV"
+      "id": 10001201,
+      "username": "ksmith",
+      "password": "ksmith",
+      "name": "Kees Smith",
+      "role": "manager",
+      "professionals": [
+        10001200,
+        10012003
+      ]
     },
     {
-      "id": 2,
-      "name": "Laptop"
+      "id": 100012002,
+      "username": "jjansen",
+      "password": "jjansen",
+      "name": "Jan Jansen",
+      "role": "sales",
+      "clients": [
+        "KLM",
+        "DUO"
+      ]
+    },
+    {
+      "id": 10001203,
+      "username": "lvermeer",
+      "password": "lvermeer",
+      "name": "Lisa Vermeer ",
+      "role": "professional",
+      "promocards": {
+        "role": "Java developer",
+        "name": "Lisa Vermeer"
+      }
     }
   ]
 }
