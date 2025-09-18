@@ -1,26 +1,24 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
-dotenv.config();
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
 import path from "path";
+import dotenv from "dotenv";
+dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json"), "utf-8"));
 
 const app = express();
 const port = 4000;
+const API_KEY = process.env.API_KEY;
+app.use(express.json());
 
 app.use(cors({
   origin: 'http://localhost:4200',
   allowedHeaders: ['x-api-key', 'Content-Type']
 }));
-
-app.use(express.json());
-
-const API_KEY = process.env.API_KEY;
 
 function authenticateApiKey(req, res, next) {
   const apiKey = req.headers["x-api-key"];
@@ -36,30 +34,21 @@ app.get("/api/user", authenticateApiKey, (req, res) => {
 });
 
 app.post("/api/user", authenticateApiKey, (req, res) => {
-  
-const newUser = req.body;
+  const { username, password } = req.body;
 
-  if (!newUser || !newUser.id || !newUser.username || !newUser.password || !newUser.name || !newUser.role) {
-    return res.status(400).json({ error: "missing user data" });
+  const user = data.users.find(user => user.username === username);
+
+  if (!user) {
+    return res.status(400).json({ message: 'Gebruiker bestaat niet' });
   }
 
-  data.users.push(newUser);
+  if (user.password !== password) {
+    return res.status(400).json({ message: 'Combinatie van gebruikersnaam en wachtwoord is niet correct' });
+  }
 
-  fs.writeFileSync(
-    path.join(__dirname, "data.json"),
-    JSON.stringify(data, null, 2),
-    "utf-8"
-  );
-
-  res.status(201).json({ message: "User added successfully", user: newUser });
-
+  return res.status(201).json({ username: user.username, name: user.name, role: user.role, promocards: user.promocards });
 });
 
-app.get("/api/product", authenticateApiKey, (req, res) => {
-  res.json(data.products);
-});
-
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

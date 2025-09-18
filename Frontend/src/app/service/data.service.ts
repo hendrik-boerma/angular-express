@@ -12,13 +12,14 @@ export class DataService {
     'x-api-key': environment.apiKey
   });
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
     return this.http.get('http://localhost:4000/api/user', { headers: this.headers });
   }
 
-  getProducts(): Observable<any> {
-    return this.http.get('http://localhost:4000/api/product', { headers: this.headers });
+  postUser(username:string, password:string): Observable<any> {
+    const body = { username, password };
+    return this.http.post('http://localhost:4000/api/user', body, { headers: this.headers });
   }
 }

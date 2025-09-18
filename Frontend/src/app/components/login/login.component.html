@@ -1,8 +1,9 @@
 <h2>Inloggen</h2>
 <form>
     <label for="username">Username</label>
-    <input type="text" id="username" name="username">
+    <input type="text" [(ngModel)]="loginObj.username" id="username" name="username" autocomplete="current-username">
     <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-    <app-button text="Inloggen" (click)="checkInput()"></app-button>
+    <input type="password" [(ngModel)]="loginObj.password" id="password" name="password" autocomplete="current-password">
+    <p *ngIf="errorMessage">{{ errorMessageText }}</p>
+    <app-button text="Inloggen" (click)="Login()"></app-button>
 </form>

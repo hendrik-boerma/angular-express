@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,34 +6,5 @@ import { DataService } from '../../service/data.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private dataService: DataService) {}
-  userData: any
-  productData: any
 
-  ngOnInit() {
-    this.getUsers();
-    this.getProducts();
-  }
-  
-  getUsers() {
-    this.dataService.getUsers().subscribe({
-      next: res => {
-        this.userData = res;
-      },
-      error: err => {
-        console.error('Error fetching data', err);
-      }
-    });
-  }
-  
-  getProducts() {
-    this.dataService.getProducts().subscribe({
-      next: res => {
-        this.productData = res;
-      },
-      error: err => {
-        console.error('Error fetching data', err);
-      }
-    });
-  }
 }
