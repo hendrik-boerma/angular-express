@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../../service/data.service';
 import { UserService } from '../../service/user.service';
 
@@ -9,6 +10,7 @@ import { UserService } from '../../service/user.service';
 })
 export class LoginComponent {
   constructor(
+    private router: Router,
     private dataService: DataService,
     private userService: UserService
   ) {}
@@ -24,6 +26,7 @@ export class LoginComponent {
   postUser(username: string, password: string) {
     this.dataService.postUser(username, password).subscribe({
       next: res => {
+        this.router.navigate(['/dashboard'])
         const user = {
           username: res.username,
           name: res.name,

@@ -35,3 +35,9 @@ input, button {
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
 }
+
+
+:focus-visible {
+    outline: none;
+    outline: 1.5px solid $orange;
+}
