@@ -12,7 +12,7 @@ export class DashboardComponent {
   name: string = 'op het dashboard';
 
 ngOnInit() {
-    this.name = this.userService.userData?.name || 'op het dashboard'
+    this.name = this.userService.userData?.name || 'op het dashboard';
 }
 
 }
