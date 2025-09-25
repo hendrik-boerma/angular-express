@@ -34,6 +34,7 @@ export class LoginComponent {
           promocards: res.promocards
         }
         this.userService.setUserData(user);
+        sessionStorage.setItem('isLoggedIn', 'true');
       },
       error: err => {
         this.errorMessage = true;

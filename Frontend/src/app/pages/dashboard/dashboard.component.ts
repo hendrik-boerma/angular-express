@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../service/user.service';
+import { UserService, UserData } from '../../service/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,12 +7,17 @@ import { UserService } from '../../service/user.service';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {  
+  user: UserData = {
+    username: '',
+    name: '',
+    role: '',
+    promocards: []
+  }
+
   constructor( private userService: UserService) {}
-  
-  name: string = 'op het dashboard';
 
 ngOnInit() {
-    this.name = this.userService.userData?.name || 'op het dashboard';
+    this.user = this.userService.userData;
 }
 
 }
