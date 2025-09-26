@@ -4,8 +4,12 @@ export interface UserData {
   username: string;
   name: string;
   role: string;
-  promocards: any[];
-}
+  promocards: {
+    name: string;
+    role: string;
+    description: string;
+  }
+  };
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +19,11 @@ export class UserService {
     username: '',
     name: '',
     role: '',
-    promocards: []
+    promocards: {
+      name: '',
+      role: '',
+      description: ''
+    }
   };
 
   constructor() {

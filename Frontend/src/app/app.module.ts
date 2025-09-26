@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonComponent } from './components/button/button.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PromocardComponent } from './components/promocard/promocard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     FooterComponent,
     LoginComponent,
     ButtonComponent,
-    DashboardComponent
+    DashboardComponent,
+    PromocardComponent
   ],
   imports: [
     BrowserModule,

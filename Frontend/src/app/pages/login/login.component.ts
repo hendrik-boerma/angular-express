@@ -38,7 +38,7 @@ export class LoginComponent {
       },
       error: err => {
         this.errorMessage = true;
-        this.errorMessageText = err.error.message || 'Er is een fout opgetreden.';
+        this.errorMessageText = err.error.message || 'Er is een fout opgetreden bij het ophalen van de gegevens';
       }
     });
   }
