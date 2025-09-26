@@ -1,9 +1,9 @@
 <h2>Inloggen</h2>
 <form>
-    <label for="username">Username</label>
-    <input type="text" [(ngModel)]="loginObj.username" id="username" name="username" autocomplete="current-username">
-    <label for="password">Password</label>
-    <input type="password" [(ngModel)]="loginObj.password" id="password" name="password" autocomplete="current-password">
+    <label for="username">Gebruikersnaam</label>
+    <input type="text" [(ngModel)]="loginObj.username" id="username" name="username" autocomplete="current-username" placeholder="Sogeti ID">
+    <label for="password">Wachtwoord</label>
+    <input type="password" [(ngModel)]="loginObj.password" id="password" name="password" autocomplete="current-password" placeholder="Wachtwoord">
     <p *ngIf="errorMessage">{{ errorMessageText }}</p>
     <app-button text="Inloggen" (click)="Login()"></app-button>
 </form>

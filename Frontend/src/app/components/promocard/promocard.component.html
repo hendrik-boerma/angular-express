@@ -1,7 +1,7 @@
-<section *ngFor="let card of promocards">
-  <div class="promocard">
-    <h3>{{ card.name }}</h3>
-    <p>{{ card.role }}</p>
-    <p>{{ card.description }}</p>
+<section class="promocardcontainer">
+  <div class="promocard" *ngFor="let card of promocards">
+    <h2>{{ card.name }}</h2>
+    <h3>{{ card.role }}</h3>
+    <p> {{ card.grade }}</p>
   </div>
 </section>

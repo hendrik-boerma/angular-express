@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: $capgemini-blue-hover;
+}
+
 .arrow-icon {
     background-color: $vibrant-blue;
     color: $white;

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ButtonComponent } from './components/button/button.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PromocardComponent } from './components/promocard/promocard.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PromocardComponent } from './components/promocard/promocard.component';
     LoginComponent,
     ButtonComponent,
     DashboardComponent,
-    PromocardComponent
+    PromocardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

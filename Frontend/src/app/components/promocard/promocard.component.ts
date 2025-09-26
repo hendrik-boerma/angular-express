@@ -7,7 +7,7 @@ import { DataService } from '../../service/data.service';
   styleUrl: './promocard.component.scss'
 })
 export class PromocardComponent {
-  promocards: any = []
+  promocards: any[] = []
 
   constructor(private dataService: DataService) {}
 

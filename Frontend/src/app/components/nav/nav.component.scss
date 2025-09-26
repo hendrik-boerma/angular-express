@@ -1,0 +1,30 @@
+@import '../../../variables.scss';
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    list-style: none;
+    border-bottom: 2px solid $cool-grey;
+}
+
+nav a {
+    width: 33%;
+    text-align: center;
+    padding-bottom: 1rem;
+    color: $vibrant-blue;
+}
+
+nav a:hover {
+    border-bottom: 2px solid $vibrant-blue;
+    margin-bottom: -2px;
+    cursor: pointer;
+}
+
+nav a:active {
+    border-bottom: 2px solid $cool-tech-red;
+    margin-bottom: -2px;
+    color: $cool-tech-red;
+}
